@@ -27,15 +27,15 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
-        options: {
-          formatter: require('eslint-friendly-formatter')
-        }
-      },
+//    {
+//      test: /\.(js|vue)$/,
+//      loader: 'eslint-loader',
+//      enforce: 'pre',
+//      include: [resolve('src'), resolve('test')],
+//      options: {
+//        formatter: require('eslint-friendly-formatter')
+//      }
+//    },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -64,4 +64,21 @@ module.exports = {
       }
     ]
   }
+}
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports.devtool = '#source-map'
+  // http://vue-loader.vuejs.org/en/workflow/production.html
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
+  ])
 }
