@@ -1,17 +1,12 @@
 <template>
 	<div>
-		asdasd
+		js相关资料页面
 	</div>
 </template>
 
 <script>
 	export default {
-	  name: 'jacascript',
-	  data () {
-	    return {
-	    	
-	    }
-	  }
+	  name: 'javascript'
 	}
 </script>
 

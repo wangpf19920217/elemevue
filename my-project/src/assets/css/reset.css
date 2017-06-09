@@ -19,6 +19,7 @@ table,td{
 	vertical-align:top;
 }
 a{
+	color: #434343;
 	text-decoration:none;
 }
 /*a:hover{
