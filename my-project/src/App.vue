@@ -7,9 +7,9 @@
 	       	 	<elheader></elheader>
 	        </transition>
 	        
-	         <transition>
+	         <!--<transition>
 	       	 	<Enote></Enote>
-	        </transition>
+	        </transition>-->
 	        
 	    </el-row>
 	     <transition name="slide">
