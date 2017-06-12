@@ -77,7 +77,7 @@
 
 <script>
 	export default {
-	  name: 'nodevue'
+	  name: 'noteangular'
 	}
 </script>
 
