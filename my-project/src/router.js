@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Header from '@/components/header'
+// import Header from '@/components/header'
 import Note from '@/components/note'
 import Self from '@/components/self'
 import Javascript from '@/components/javascript'
@@ -9,7 +9,8 @@ import Css from '@/components/css'
 
 Vue.use(Router)
 const routes = [
-	{ path: '/',component: Header},
+	{ path: '/',component: Note},
+	// 避免头部重复
 	{ path: '/note',component: Note},
 	{ path: '/self',component: Self},
 	{ path: '/html',component: Html},

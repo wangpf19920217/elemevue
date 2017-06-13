@@ -6,14 +6,9 @@
 	        <transition>
 	       	 	<elheader></elheader>
 	        </transition>
-	        
-	         <!--<transition>
-	       	 	<Enote></Enote>
-	        </transition>-->
-	       
 	    </el-row>
 	     <!--嵌套路由-->
-	    <transition name="slide">
+	    <transition name="slide" >
 	     	<router-view></router-view>
 	    </transition>
 	</div>
