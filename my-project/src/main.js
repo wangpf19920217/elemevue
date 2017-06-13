@@ -10,8 +10,6 @@ import axios from 'axios'
 
 Vue.config.productionTip = false
 
-Vue.use(Vuex)
-
 Vue.use(ElementUI)
 /* 引入elementui */
 
