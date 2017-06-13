@@ -12,15 +12,9 @@ Vue.use(ElementUI)
 
 /* eslint-disable no-new */
 new Vue({
-	  el: '#header',
+	  el: '#app',
 	  router,
 	  template: '<App/>',
 	  components: { App }
-},
-{
-	  el: '#content',
-	  router,
-	  template: '<App/>',
-	  components: { App }
-},
+}
 )

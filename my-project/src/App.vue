@@ -10,23 +10,22 @@
 	         <!--<transition>
 	       	 	<Enote></Enote>
 	        </transition>-->
-	        
+	       
 	    </el-row>
-	     <transition name="slide">
-	    <!--嵌套路由-->
-	     <router-view></router-view>
-	      </transition>
+	     <!--嵌套路由-->
+	    <transition name="slide">
+	     	<router-view></router-view>
+	    </transition>
 	</div>
 </template>
 
 <script>
 import Vue from 'vue'
 import Elheader from "./components/header"
-import Enote from "./components/note"
 
     export default {
         //加载组件
-        components:{Elheader,Enote},
+        components:{Elheader},
         created:()=>{
         	console.log('生命周期钩子');
         	console.log('header组件载入');

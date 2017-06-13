@@ -9,7 +9,7 @@ import Css from '@/components/css'
 
 Vue.use(Router)
 const routes = [
-	{ path: '/bar',component: Header},
+	{ path: '/',component: Header},
 	{ path: '/note',component: Note},
 	{ path: '/self',component: Self},
 	{ path: '/html',component: Html},

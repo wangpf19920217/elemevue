@@ -13,7 +13,12 @@
 
 <script>
 	export default {
-	  name: 'header'
+	  name: 'header',
+	  data(){
+	  	return {
+	  		activeIndex: '1'
+	  	}
+	  }
 	}
 </script>
 

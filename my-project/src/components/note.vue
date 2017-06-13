@@ -3,10 +3,7 @@
 	<!--结果：vue的学习路线 掌握vue。-->
 	<!--	    需求:vuecli(2) + vueRouter + vuex + elementul来搭建项目;-->
 	<!--
-		
 		vue
-		
-		
 	-->
 	<el-tabs v-model="activeName" @tab-click="handleClick">
 		<el-tab-pane label="vue" name="first">
@@ -168,17 +165,21 @@
 			</el-collapse>
 		</el-tab-pane>
 	</el-tabs>
+
+	
 </template>
 
 <script>
 	/* eslint-disable no-new */
 	import Vue from 'vue'
 	import Router from 'vue-router'
+//	import Enote from "./components/note/noteVue"
 
 	var showN = () => {
 		const app = new Vue({
 			Router,
 			components: {
+				
 			}
 		})
 		app.$mount('#showNote')
