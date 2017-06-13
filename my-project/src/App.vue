@@ -16,6 +16,8 @@
 
 <script>
 import Vue from 'vue'
+import axios from 'axios'
+import Qs from 'qs'
 import Elheader from "./components/header"
 
     export default {
