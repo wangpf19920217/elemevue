@@ -58,9 +58,11 @@
 	export default {
 		data() {
 			return {
-				msg: '',
-				activeNames: ['1'],
-				activeName: 'first'
+				// msg: '',
+				activeName: 'first',
+				notatabitem:[{
+					
+				},{},{},{}]
 			}
 		},
 		components:{

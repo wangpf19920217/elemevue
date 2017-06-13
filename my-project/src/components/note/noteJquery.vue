@@ -1,7 +1,7 @@
 <template>
-	<el-collapse v-model="activeNames" accordion>
+	<el-collapse accordion>
       <el-collapse-item title="jquery.js" name="1">
-	    <div>vue.js（读音 /vjuː/）是一套构建用户界面的渐进式框架。{{ message }}</div>
+	    <div>vue.js（读音 /vjuː/）是一套构建用户界面的渐进式框架。</div>
 	    <div>
 	    	<a target="_blank"  href="https://cn.vuejs.org/v2/guide/installation.html">文档地址：https://cn.vuejs.org/v2/guide/installation.html</a>
 	    </div>
@@ -77,9 +77,7 @@
 
 <script>
 	export default {
-	  name: 'nodejquery',
-		data(){
-		}
+	  name: 'nodejquery'
 	}
 </script>
 

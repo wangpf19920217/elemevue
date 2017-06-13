@@ -1,5 +1,5 @@
 <template>
-	<el-collapse v-model="activeNames" accordion>
+	<el-collapse accordion>
       <el-collapse-item title="vue.js" name="1">
 	    <div>vue.js（读音 /vjuː/）是一套构建用户界面的渐进式框架。</div>
 	    <div>
