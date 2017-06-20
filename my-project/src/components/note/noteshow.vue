@@ -28,6 +28,7 @@
 
 <script>
 	export default {
+	  props:['tablelist'],
 	  name: 'nodevue'
 	}
 </script>

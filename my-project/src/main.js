@@ -11,6 +11,7 @@ import axios from 'axios'
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
+Vue.use(Vuex)
 /* 引入elementui */
 
 /* eslint-disable no-new */

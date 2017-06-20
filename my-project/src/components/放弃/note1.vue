@@ -6,10 +6,41 @@
 		vue
 	-->
 	<div id="elem_tab_box">
-		<el-tabs  v-model="activeName" @tab-click="handleClick" >
-			<tablist v-bind.tablelist="tablelistitem">
-				父组件 子是一个table切换 
-			</tablist>
+		<el-tabs v-model="activeName" @tab-click="handleClick">
+			<el-tab-pane label="vue" name="first" v-on:click="randervue()" @tab-click="randervue()" >
+				<vuelistbox>
+					这里对应vue的tab
+				</vuelistbox>
+			</el-tab-pane>
+			<!--
+				
+				angular
+				
+			-->
+			<el-tab-pane label="angular" index="noteAngular" name="second">
+				<angularlistbox>
+					这里对应vue的tab
+				</angularlistbox>
+			</el-tab-pane>
+			<!--
+				
+				react
+			-->
+			<el-tab-pane label="react" index="noteReact" name="third">
+				<reactlistbox>
+					这里对应react的tab
+				</reactlistbox>
+			</el-tab-pane>
+			
+			<!--
+				jquery
+				
+			-->
+			<el-tab-pane label="jquery" index="noteJquery" name="fourth">
+					<jquerylistbox>
+						这里对应jquery的tab
+					</jquerylistbox>
+			</el-tab-pane>
 		</el-tabs>
 	
 	</div>
@@ -44,8 +75,20 @@
 	//     // 只有两个请求都完成才会成功，否则会被catch捕获
 	//   }));
 	
+	let Vobj = new Vue();
+	
+	Vue.component('simple-counter', {
+		  template: '<button v-on:click="counter += 1">{{ counter }}</button>',
+		  // 技术上 data 的确是一个函数了，因此 Vue 不会警告，
+		  // 但是我们返回给每个组件的实例的却引用了同一个data对象
+		  data: function () {
+		    return data
+		  }
+		})
+	
+	
+	console.log(Vobj)
 	export default {
-		name:'noteshowbox',
 		data() {
 			return {
 				activeName: 'first',
@@ -53,7 +96,10 @@
 			}
 		},
 		components:{
-			tablist:require('./note/noteshow')
+			vuelistbox:require('./note/noteVue'),
+			angularlistbox:require('./note/noteAngular'),
+			reactlistbox:require('./note/noteReact'),
+			jquerylistbox:require('./note/noteJquery')
 		},
 		methods: {
 			handleClick(tab, event) {
@@ -66,12 +112,6 @@
 			},
 			randervue() {
 				console.log('请求数据')
-			}
-		},
-		computed:{
-			datalistitem:{
-				get:function(){},
-				set:function(){}
 			}
 		}
 	}
